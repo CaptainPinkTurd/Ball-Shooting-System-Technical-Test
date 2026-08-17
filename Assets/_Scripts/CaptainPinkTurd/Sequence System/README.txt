@@ -1,0 +1,1 @@
+For other custom Sequencer Actions, it is recommended to use it outside of the system when it needs to reference data from outside of its scope

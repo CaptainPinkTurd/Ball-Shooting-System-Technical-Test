@@ -1,0 +1,20 @@
+{
+    "name": "EffectSystem",
+    "rootNamespace": "CaptainPinkTurd.EffectSystem",
+    "references": [
+        "GUID:4379980e305684f4bbea58f0a9e24506",
+        "GUID:4307f53044263cf4b835bd812fc161a4",
+        "GUID:68095ea3c6785fb4b8d30267c6aa893e",
+        "GUID:f865f37af3d66f544b10edd71d8929f9",
+        "GUID:613783dc1674e844b87788ea74ede0f6"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

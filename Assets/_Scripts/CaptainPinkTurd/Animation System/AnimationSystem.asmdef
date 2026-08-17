@@ -1,0 +1,18 @@
+{
+    "name": "AnimationSystem",
+    "rootNamespace": "CaptainPinkTurd.AnimationSystem",
+    "references": [
+        "GUID:4379980e305684f4bbea58f0a9e24506",
+        "GUID:91d419664d8c89c4b8871250445a9bf5",
+        "GUID:68095ea3c6785fb4b8d30267c6aa893e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

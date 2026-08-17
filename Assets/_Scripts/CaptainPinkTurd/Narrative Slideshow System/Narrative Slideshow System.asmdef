@@ -1,0 +1,20 @@
+{
+    "name": "NarrativeSlideshowSystem",
+    "rootNamespace": "CaptainPinkTurd.NarrativeSlideshow",
+    "references": [
+        "GUID:4379980e305684f4bbea58f0a9e24506",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:beed3953cc12c494ea6788c179cd1875",
+        "GUID:531fc6e738769e744ab78e19a5152e71",
+        "GUID:75469ad4d38634e559750d17036d5f7c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

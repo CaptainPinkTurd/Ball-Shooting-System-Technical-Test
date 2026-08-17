@@ -1,0 +1,22 @@
+{
+    "name": "UnitSystem",
+    "rootNamespace": "CaptainPinkTurd.UnitSystem",
+    "references": [
+        "GUID:4379980e305684f4bbea58f0a9e24506",
+        "GUID:68095ea3c6785fb4b8d30267c6aa893e",
+        "GUID:beed3953cc12c494ea6788c179cd1875",
+        "GUID:e98deedda116a3b41bd4dc7d9a4907f0",
+        "GUID:97c52685c517a634999b927b1b1e90df",
+        "GUID:5dadfd2ef22a03c409c1d4a74e0ea477",
+        "GUID:75469ad4d38634e559750d17036d5f7c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

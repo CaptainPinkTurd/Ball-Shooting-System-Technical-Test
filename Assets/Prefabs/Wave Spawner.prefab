@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2932224550392068083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3055471992477323278}
+  - component: {fileID: 1009567131508223529}
+  - component: {fileID: 1854765574697341999}
+  m_Layer: 0
+  m_Name: Wave Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3055471992477323278
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2932224550392068083}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9, y: 3.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1009567131508223529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2932224550392068083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fd7c842a739d6f4eb3b3fc847cd392c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: SpawnSystem::CaptainPinkTurd.SpawnSystem.Wave.WaveSpawner
+  numberOfWaves: 2
+  minSpawnNumber: 2
+  maxSpawnNumber: 2
+  loopToFirstWave: 0
+  onLastWaveEnd: {fileID: 11400000, guid: 7eae4cb6914e62742a10dbe42a6f610f, type: 2}
+--- !u!114 &1854765574697341999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2932224550392068083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77f9fd6680cc4f0a8326824efa2f6fbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: SpawnSystem::CaptainPinkTurd.SpawnSystem.Procedural.ProceduralObjectSpawner
+  radius: 2
+  regionSize: {x: 20, y: -12}
+  rejectionThreshold: 30
+  displayRadius: 0.25
+  lootDropTableProfiles:
+  - {fileID: 11400000, guid: 356577d1d86205c489b3887c40643730, type: 2}
+  chosenLootDropIndex: 0
+  blockingMask:
+    serializedVersion: 2
+    m_Bits: 1729
+  spawnDelay: 0.5
+  spawnOnStart: 0
+  numberOfObjectsToSpawn: 3
+  assignSpawnedObjectAsChild: 1
+  respawnOnInterval: 0
+  spawnInterval: 300

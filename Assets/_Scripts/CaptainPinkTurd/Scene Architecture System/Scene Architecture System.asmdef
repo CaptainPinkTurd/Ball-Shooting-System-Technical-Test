@@ -1,0 +1,18 @@
+{
+    "name": "SceneArchitectureSystem",
+    "rootNamespace": "CaptainPinkTurd.Scene",
+    "references": [
+        "GUID:4379980e305684f4bbea58f0a9e24506",
+        "GUID:68095ea3c6785fb4b8d30267c6aa893e",
+        "GUID:4e3d7ae76ace4464d8eea86502360e7f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

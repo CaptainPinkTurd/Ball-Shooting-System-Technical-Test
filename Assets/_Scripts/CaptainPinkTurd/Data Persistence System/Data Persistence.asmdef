@@ -1,0 +1,16 @@
+{
+    "name": "DataPersistence",
+    "rootNamespace": "CaptainPinkTurd.DataPersistence",
+    "references": [
+        "GUID:4379980e305684f4bbea58f0a9e24506"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

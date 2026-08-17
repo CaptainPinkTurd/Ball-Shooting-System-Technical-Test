@@ -1,0 +1,17 @@
+{
+    "name": "CursorSystem",
+    "rootNamespace": "CaptainPinkTurd.CursorSystem",
+    "references": [
+        "GUID:4379980e305684f4bbea58f0a9e24506",
+        "GUID:88ba7d0c559e73c48b7b3ca56ea27e7d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
