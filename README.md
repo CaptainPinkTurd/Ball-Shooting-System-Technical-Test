@@ -10,12 +10,13 @@ Prototype game bắn bóng 2D trên Unity: giữ chuột/ngón tay để bắn l
 ## 2. Cách chạy 
 
 1. Mở scene Test Scene lên.
-2. Nhấn **Play**.
-3. Test bằng chuột ngay trong Editor:
+2. Chọn giả lập Apple Iphone 12 làm size màn hình chuẩn.
+3. Nhấn **Play**.
+4. Test bằng chuột ngay trong Editor:
    - **Giữ chuột trái** trong vùng va chạm (`interactableZone`) của turret → bắn liên tục theo hướng từ turret tới vị trí chuột.
    - **Thả chuột** → dừng bắn.
    - Trên thiết bị thật (mobile), cùng một code path hoạt động qua touch nhờ Input System dùng chung action map cho cả Mouse và Touch.
-4. Quan sát:
+5. Quan sát:
    - Bóng nảy qua lại giữa các bóng và tường theo physics (Rigidbody2D).
    - **Ball A**: sau khi chạm thành, đợi ~2s rồi biến mất + nổ, đẩy các bóng trong bán kính ra xa (gizmo bán kính nổ hiện khi chọn object trong Scene view).
    - **Ball B**: chạm thành là biến mất ngay, sinh ra 2 Ball A bắn ngược trở lại vào trong màn hình.
@@ -117,6 +118,8 @@ Có 2 cơ chế riêng biệt:
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/10bba097-ae8d-4c67-82e5-9adbbb42e610" />
 
 - **Ball Type C chưa được implement** — theo đúng phạm vi đề bài (chỉ yêu cầu kiến trúc *sẵn sàng* mở rộng), chưa tạo class cụ thể.
+- Một số bóng có vấn đề bị clip ra bên ngoài tường thành và không được trả về pool nên tạm thời dùng giải pháp ép bóng despawn trong script ScreenBoundary nếu phát hiện rời ra khỏi bound trên màn hình.
+- Chưa có script tự điều chỉnh tường thành và size của vùng tương tác khi chọn giả lập máy với size màn hình khác.
 - **Một số script trong thư mục `Game`** (`GameManager.cs`, `Enemy/*`, `Player/*`, `DraggableGameObject2D.cs`, `RotatableGameObject2D.cs`) là scaffolding có sẵn từ framework cá nhân, không phục vụ trực tiếp gameplay bắn bóng của bài test — giữ lại vì đang nằm chung thư mục, không xóa để tránh vỡ reference khác trong project.
 
 ## 7. AI usage
