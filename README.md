@@ -9,8 +9,8 @@ Prototype game bắn bóng 2D trên Unity: giữ chuột/ngón tay để bắn l
 
 ## 2. Cách chạy 
 
-1. Mở scene Test Scene lên.
-2. Chọn giả lập Apple Iphone 12 làm size màn hình chuẩn.
+1. Mở scene "Test Scene" lên.
+2. Chọn một máy điện thoại giả lập bất kỳ trong play scene.
 3. Nhấn **Play**.
 4. Test bằng chuột ngay trong Editor:
    - **Giữ chuột trái** trong vùng va chạm (`interactableZone`) của turret → bắn liên tục theo hướng từ turret tới vị trí chuột.
@@ -119,7 +119,6 @@ Có 2 cơ chế riêng biệt:
 
 - **Ball Type C chưa được implement** — theo đúng phạm vi đề bài (chỉ yêu cầu kiến trúc *sẵn sàng* mở rộng), chưa tạo class cụ thể.
 - Một số bóng có vấn đề bị clip ra bên ngoài tường thành và không được trả về pool nên tạm thời dùng giải pháp ép bóng despawn trong script ScreenBoundary nếu phát hiện rời ra khỏi bound trên màn hình.
-- Chưa có script tự điều chỉnh tường thành và size của vùng tương tác khi chọn giả lập máy với size màn hình khác.
 - **Một số script trong thư mục `Game`** (`GameManager.cs`, `Enemy/*`, `Player/*`, `DraggableGameObject2D.cs`, `RotatableGameObject2D.cs`) là scaffolding có sẵn từ framework cá nhân, không phục vụ trực tiếp gameplay bắn bóng của bài test — giữ lại vì đang nằm chung thư mục, không xóa để tránh vỡ reference khác trong project.
 
 ## 7. AI usage
