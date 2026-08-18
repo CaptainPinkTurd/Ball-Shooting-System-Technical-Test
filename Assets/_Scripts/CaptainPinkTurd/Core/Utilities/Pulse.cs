@@ -33,6 +33,7 @@ namespace CaptainPinkTurd.Core.Utilities
             DeactivatePulse();
         }
 
+        public void SetDuration(float duration) => this.duration = duration;
         public void ActivatePulse()
         {
             DeactivatePulse();

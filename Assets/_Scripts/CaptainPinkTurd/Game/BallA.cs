@@ -15,13 +15,8 @@ namespace CaptainPinkTurd.Game
         [SerializeField] private ParticleSystemController explosionVfxPrefab;
         [SerializeField] private SoundData explosionSfx;
         
-        private bool hasHitWall;
-        
         protected override void OnBallCollisionEvent()
         {
-            if (hasHitWall) return;
-
-            hasHitWall = true;
             StartCoroutine(CoroutineUtils.WaitForSeconds(lifeTime, Explode));
         }
 
@@ -48,8 +43,7 @@ namespace CaptainPinkTurd.Game
 
                 rb.AddForce(direction.normalized * explosionForce, ForceMode2D.Impulse);
             }
-
-            hasHitWall = false;
+            
             Despawn();
         }
 

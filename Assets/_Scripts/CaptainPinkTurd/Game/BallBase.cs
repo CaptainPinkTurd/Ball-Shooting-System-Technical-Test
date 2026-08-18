@@ -13,17 +13,27 @@ namespace CaptainPinkTurd.Game
         [SerializeField] protected LayerMask collisionEventLayer;
 
         internal Rigidbody2D rb;
+        
+        protected bool hasHitWall;
 
         protected override void Awake()
         {
             base.Awake();
             
             rb = GetComponent<Rigidbody2D>();
+            rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+        }
+
+        protected override void OnDisable()
+        {
+            base.OnDisable();
+            
+            hasHitWall = false;
         }
 
         protected abstract void OnBallCollisionEvent();
 
-        protected void Despawn()
+        internal void Despawn()
         {
             if (SpawnedFromPool)
             {
@@ -37,8 +47,9 @@ namespace CaptainPinkTurd.Game
 
         protected virtual void OnCollisionEnter2D(Collision2D other)
         {
-            if (!collisionEventLayer.Contains(other.gameObject.layer)) return;
-            
+            if (!collisionEventLayer.Contains(other.gameObject.layer) || hasHitWall) return;
+
+            hasHitWall = true;
             OnBallCollisionEvent();
         }
     }

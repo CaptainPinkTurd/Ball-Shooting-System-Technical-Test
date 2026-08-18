@@ -34,7 +34,7 @@ namespace CaptainPinkTurd.Game
 
         protected override void OnCollisionEnter2D(Collision2D other)
         {
-            if (!collisionEventLayer.Contains(other.gameObject.layer)) return;
+            if (!collisionEventLayer.Contains(other.gameObject.layer) || hasHitWall) return;
             
             normalCollisionDirection = other.GetContact(0).normal;
             base.OnCollisionEnter2D(other);

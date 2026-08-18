@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using CaptainPinkTurd.AudioSystem;
 using CaptainPinkTurd.Core.Extensions;
 using CaptainPinkTurd.Core.Utilities;
 using CaptainPinkTurd.Game.Interactions;
@@ -14,11 +15,21 @@ namespace CaptainPinkTurd.Game
         [SerializeField] private Transform turretMuzzle;
         [Tooltip("Ball Per Seconds")]
         [SerializeField] private int fireRate = 2;
-        [SerializeField] private float launchForce = 1f;
         [SerializeField] private float rotationSpeed = 360f;
+        [SerializeField] private float launchForce = 1f;
+        [SerializeField] private SoundData launchSfx; 
         [SerializeField] private List<BallBase> ballPrefabShootOrder;
-        
+
+        private Pulse pulseFeedback;
         private int currentBallIndex = 0;
+
+        protected override void Awake()
+        {
+            base.Awake();
+            
+            pulseFeedback = GetComponent<Pulse>();
+            pulseFeedback.SetDuration(1f / fireRate / 2f);
+        }
 
         private void Update()
         {
@@ -29,6 +40,7 @@ namespace CaptainPinkTurd.Game
         {
             while (true)
             {
+                pulseFeedback.ActivatePulseOneShot();
                 SpawnBall();
                 
                 yield return new WaitForSeconds(1f / fireRate);
@@ -40,6 +52,9 @@ namespace CaptainPinkTurd.Game
             var ballPrefab = ballPrefabShootOrder[currentBallIndex];
             var shootDirection = ((Vector3)touchInputReader2D.PrimaryPosition - turretMuzzle.position).normalized;
         
+            SoundManager.Instance.CreateSoundBuilder()
+                .WithPosition(transform.position).WithRandomPitch().Play(launchSfx);
+            
             BallBase ball = ObjectPoolManager.Instance.SpawnObject(ballPrefab.gameObject,
                 turretMuzzle.transform.position, Quaternion.identity, ObjectPoolManager.PoolType.GameObject).GetComponent<BallBase>();
             ball.SetSpawnedFromPool(true);

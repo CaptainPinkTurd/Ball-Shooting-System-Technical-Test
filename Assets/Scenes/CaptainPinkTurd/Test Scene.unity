@@ -405,17 +405,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 716021802374538416, guid: fd8d72b9c85039f47a4082a4a9136f75, type: 3}
   m_PrefabInstance: {fileID: 1908949624251770080}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &118180499 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6606747064070202644, guid: 3034d90045145204a9ab50f20ab1d568, type: 3}
-  m_PrefabInstance: {fileID: 3350749201867829480}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 536145245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6c15ccc8a184245b13284a03e0455de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UI::CaptainPinkTurd.UI.Popup.PopupActivator
 --- !u!1 &132099723
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,11 +854,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 457344588}
   m_CullTransparentMesh: 1
---- !u!1 &536145245 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1729334358592881497, guid: 3034d90045145204a9ab50f20ab1d568, type: 3}
-  m_PrefabInstance: {fileID: 3350749201867829480}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &604967809
 GameObject:
   m_ObjectHideFlags: 0
@@ -1641,7 +1625,6 @@ Transform:
   - {fileID: 1411467362}
   - {fileID: 1429123443}
   - {fileID: 21480090}
-  - {fileID: 2032373744}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1283710704
@@ -1669,7 +1652,7 @@ Transform:
   m_GameObject: {fileID: 1283710704}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.75, y: 0, z: 0}
+  m_LocalPosition: {x: 0.9, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1776,8 +1759,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1360209324}
   - component: {fileID: 1360209323}
+  - component: {fileID: 1360209325}
   m_Layer: 0
-  m_Name: Interactable Zone
+  m_Name: Interactable/Bound Zone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1844,51 +1828,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1727938693}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1381942961 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 470499977145725219, guid: 3034d90045145204a9ab50f20ab1d568, type: 3}
-  m_PrefabInstance: {fileID: 3350749201867829480}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1381942964
+--- !u!114 &1360209325
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1381942961}
+  m_GameObject: {fileID: 1360209322}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb243ffb9c8644f0b92a742bb85ecf5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 70184b8b8ae4436e98062b365a217193, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Core::CaptainPinkTurd.Core.DesignPattern.SOAP.Events.VoidEventListener
-  gameEvent: {fileID: 11400000, guid: 1144c1dab7f2e2e4b9ff2f6583d7d085, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1940516040}
-        m_TargetAssemblyTypeName: CaptainPinkTurd.UI.Popup.PopupActivator, UI
-        m_MethodName: ShowPopup
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 536145245}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  m_EditorClassIdentifier: Game::CaptainPinkTurd.Game.ScreenBoundary
 --- !u!1 &1411467361
 GameObject:
   m_ObjectHideFlags: 0
@@ -2440,6 +2391,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1692266948}
   - component: {fileID: 1692266949}
+  - component: {fileID: 1692266950}
   m_Layer: 0
   m_Name: Gun Turret
   m_TagString: Untagged
@@ -2478,11 +2430,53 @@ MonoBehaviour:
   interactableZone: {fileID: 1360209323}
   turretMuzzle: {fileID: 1283710705}
   fireRate: 2
-  launchForce: 10
   rotationSpeed: 360
+  launchForce: 10
+  launchSfx:
+    clip: {fileID: 8300000, guid: c1287dc9b53d58d4ea90386bc935ab6e, type: 3}
+    overrideMixerGroup: 0
+    mixerGroup: {fileID: 0}
+    loop: 0
+    playOnAwake: 0
+    frequentSound: 0
+    mute: 0
+    bypassEffects: 0
+    bypassListenerEffects: 0
+    bypassReverbZones: 0
+    priority: 128
+    volume: 1
+    pitch: 1
+    panStereo: 0
+    spatialBlend: 0
+    reverbZoneMix: 1
+    dopplerLevel: 1
+    spread: 0
+    minDistance: 1
+    maxDistance: 500
+    ignoreListenerVolume: 0
+    ignoreListenerPause: 0
+    rolloffMode: 0
   ballPrefabShootOrder:
   - {fileID: 1526869882108820903, guid: 3c3656342346f46418547ad1a002bc62, type: 3}
   - {fileID: 705548065086485357, guid: 0ba9fb6d1390c3c4ea44d9244e6e0bab, type: 3}
+--- !u!114 &1692266950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692266947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ab76c6419f3e4a4da2c89143184c4f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Core::CaptainPinkTurd.Core.Utilities.Pulse
+  scaleMultiplier: 1.1
+  duration: 0.2
+  ease: 9
+  loopCount: -1
+  ignoreTimeScale: 0
+  playOnEnable: 0
 --- !u!1 &1727938692
 GameObject:
   m_ObjectHideFlags: 0
@@ -2655,62 +2649,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!1 &1940516039
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1940516041}
-  - component: {fileID: 1940516040}
-  m_Layer: 0
-  m_Name: 'Game Over Win Activator '
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1940516040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1940516039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6c15ccc8a184245b13284a03e0455de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UI::CaptainPinkTurd.UI.Popup.PopupActivator
-  popupId: {fileID: 11400000, guid: c49491ccb74ab934a9c019049f8e59b6, type: 2}
-  behaviour: 1
-  showCursorOnActive: 0
-  hideCursorOnInactive: 0
-  useInputShortcut: 0
-  inputAction: {fileID: 0}
-  onPopupShow:
-    m_PersistentCalls:
-      m_Calls: []
-  onPopupClose:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!4 &1940516041
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1940516039}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2032373744}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1944202088
 GameObject:
   m_ObjectHideFlags: 0
@@ -2862,11 +2800,6 @@ MonoBehaviour:
     masterVolume: 1
     musicVolume: 1
     sfxVolume: 1
---- !u!4 &2032373744 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4994735814907376560, guid: 3034d90045145204a9ab50f20ab1d568, type: 3}
-  m_PrefabInstance: {fileID: 3350749201867829480}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2080685436
 GameObject:
   m_ObjectHideFlags: 0
@@ -3267,7 +3200,7 @@ PrefabInstance:
     - target: {fileID: 7553500481567198232, guid: fd8d72b9c85039f47a4082a4a9136f75, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 118180499}
+      objectReference: {fileID: 0}
     - target: {fileID: 7576370691083009969, guid: fd8d72b9c85039f47a4082a4a9136f75, type: 3}
       propertyPath: m_Layer
       value: 5
@@ -3329,98 +3262,6 @@ PrefabInstance:
       addedObject: {fileID: 1543466863}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd8d72b9c85039f47a4082a4a9136f75, type: 3}
---- !u!1 &1908949624251770081 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7576370691083009969, guid: fd8d72b9c85039f47a4082a4a9136f75, type: 3}
-  m_PrefabInstance: {fileID: 1908949624251770080}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &3350749201867829480
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1182088842}
-    m_Modifications:
-    - target: {fileID: 464694309363568720, guid: 3034d90045145204a9ab50f20ab1d568, type: 3}
-      propertyPath: popupDictionary.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 464694309363568720, guid: 3034d90045145204a9ab50f20ab1d568, type: 3}
-      propertyPath: popupDictionary.Array.data[2].Key
-      value: 
-      objectReference: {fileID: 11400000, guid: c49491ccb74ab934a9c019049f8e59b6, type: 2}
-    - target: {fileID: 464694309363568720, guid: 3034d90045145204a9ab50f20ab1d568, type: 3}
-      propertyPath: popupDictionary.Array.data[0].Value
-      value: 
-      objectReference: {fileID: 6060663175974623035}
-    - target: {fileID: 464694309363568720, guid: 3034d90045145204a9ab50f20ab1d568, type: 3}
-      propertyPath: popupDictionary.Array.data[1].Value
-      value: 
-      objectReference: {fileID: 1908949624251770081}
-    - target: {fileID: 464694309363568720, guid: 3034d90045145204a9ab50f20ab1d568, type: 3}
-      propertyPath: popupDictionary.Array.data[2].Value
-      value: 
-      objectReference: {fileID: 1043646272}
-    - target: {fileID: 1713457003138460976, guid: 3034d90045145204a9ab50f20ab1d568, type: 3}
-      propertyPath: m_Name
-      value: Popup Manager
-      objectReference: {fileID: 0}
-    - target: {fileID: 1713457003138460976, guid: 3034d90045145204a9ab50f20ab1d568, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4994735814907376560, guid: 3034d90045145204a9ab50f20ab1d568, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4994735814907376560, guid: 3034d90045145204a9ab50f20ab1d568, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4994735814907376560, guid: 3034d90045145204a9ab50f20ab1d568, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4994735814907376560, guid: 3034d90045145204a9ab50f20ab1d568, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4994735814907376560, guid: 3034d90045145204a9ab50f20ab1d568, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4994735814907376560, guid: 3034d90045145204a9ab50f20ab1d568, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4994735814907376560, guid: 3034d90045145204a9ab50f20ab1d568, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4994735814907376560, guid: 3034d90045145204a9ab50f20ab1d568, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4994735814907376560, guid: 3034d90045145204a9ab50f20ab1d568, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4994735814907376560, guid: 3034d90045145204a9ab50f20ab1d568, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4994735814907376560, guid: 3034d90045145204a9ab50f20ab1d568, type: 3}
-      insertIndex: 1
-      addedObject: {fileID: 1940516041}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 470499977145725219, guid: 3034d90045145204a9ab50f20ab1d568, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1381942964}
-  m_SourcePrefab: {fileID: 100100000, guid: 3034d90045145204a9ab50f20ab1d568, type: 3}
 --- !u!1001 &4032893764354950229
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3533,11 +3374,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &6060663175974623035 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8240588107901580464, guid: fd8d72b9c85039f47a4082a4a9136f75, type: 3}
-  m_PrefabInstance: {fileID: 1908949624251770080}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &6317065125788700337
 RectTransform:
   m_ObjectHideFlags: 0
